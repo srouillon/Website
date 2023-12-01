@@ -1,0 +1,98 @@
+.flash {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    color: #1c001c;
+}
+
+.flash-success {
+    background-color: lightgreen;
+}
+
+.flash-error {
+    background-color: lightcoral;
+}
+
+#typed-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    overflow: hidden; /* Cache le texte qui dépasse la largeur */
+}
+
+.text-magenta {
+    color: #ff00ff;
+}
+
+.no-link-cursor {
+    cursor: default;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 1s;
+    width: 50%; /* Définissez la largeur à 50% pour que les éléments ne se chevauchent pas */
+    box-sizing: border-box; /* Garantit que la largeur inclut la bordure et le padding */
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+}
+
+.animate-on-scroll.left {
+}
+
+.animate-on-scroll.right {
+    transform: translateX(100%);
+}
+
+#line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(#212529, #60d8f9, #212529); /* Dégradé de couleur */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre légère */
+}
+
+#softSkill-container {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 1;
+    white-space: nowrap; /* Empêcher le saut de ligne */
+    overflow: hidden; /* Cacher le débordement */
+}
+
+.writing-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.writing-animation::after {
+    content: "|"; /* Ajouter un effet de clignotement du curseur pour l'animation d'écriture */
+    animation: cursorBlink 0.7s infinite;
+    margin-left: 5px;
+}
+
+@keyframes cursorBlink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.fade-out-animation {
+    opacity: 0;
+}
+
+.logo-footer {
+    display: contents;
+    width: 40px;
+}

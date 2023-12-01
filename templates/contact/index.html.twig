@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ "Contact"|trans }}{{ parent() }}{% endblock %}
+
+{% block body %}
+    <h1 class="text-center text-secondary">Contact</h1>
+    <p class="fs-4 text-center my-4">N'hésitez pas à me contacter !</p>
+    {{ form_start(contactForm) }}
+    <div class="col-md-12 my-2">
+        <div class="row">
+            <div class="col-md">
+                {{ form_row(contactForm.identity) }}
+            </div>
+            <div class="col-md">
+                {{ form_row(contactForm.email) }}
+            </div>
+            <div class="col-md">
+                {{ form_row(contactForm.company) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 my-2">
+        {{ form_row(contactForm.object) }}
+    </div>
+
+    <div class="col-md-12 my-2">
+        {{ form_row(contactForm.message) }}
+    </div>
+    <div class="col-md-12 my-2">
+        <div class="row">
+            <div class="d-grid">
+                <button type="submit" class="btn btn-success btn-block"><i
+                            class="fa-solid fa-paper-plane"></i> {{ "Submit"|trans }}</button>
+            </div>
+            <div class="col-md d-flex align-items-start my-2">
+                <input type="checkbox" id="contact_check" name="check" required="required" class="form-check">
+                <label for="contact_check"
+                       class="ms-2">{{ "By ticking this box, you consent to the communication of your e-mail address for the sole purpose of being identified so that I can contact you at a later date."|trans }}</label>
+            </div>
+        </div>
+    </div>
+    {{ form_end(contactForm) }}
+{% endblock %}

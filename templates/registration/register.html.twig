@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ "Account"|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ "Account"|trans }}</h1>
+
+    {{ form_errors(registrationForm) }}
+
+    {{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.username) }}
+    {{ form_row(registrationForm.email) }}
+    {{ form_row(registrationForm.plainPassword, {
+        label: 'Password'
+    }) }}
+    {{ form_row(registrationForm.descriptionFr) }}
+    {{ form_row(registrationForm.descriptionEn) }}
+
+    <button type="submit" class="btn btn-light">{{ "Submit"|trans }}</button>
+    {{ form_end(registrationForm) }}
+{% endblock %}

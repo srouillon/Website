@@ -1,0 +1,29 @@
+{
+  "initialLives": 0,
+  "initialScore": 0,
+  "invulnerableCooldown": 5000,
+  "foodPoints": {
+    "green": 10,
+    "red": 25,
+    "blue": 15,
+    "magenta": 100
+  },
+  "foodAppearance": {
+    "green": {
+      "min": 0,
+      "max": 75
+    },
+    "red": {
+      "min": 76,
+      "max": 89
+    },
+    "blue": {
+      "min": 90,
+      "max": 95
+    },
+    "magenta": {
+      "min": 96,
+      "max": 100
+    }
+  }
+}

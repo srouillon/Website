@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ "Account"|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ "Account"|trans }}</h1>
+
+    {{ form_errors(userForm) }}
+
+    <div class="row align-items-center">
+        <div class="col-12 col-md-6">
+            {{ form_start(userForm) }}
+            {{ form_widget(userForm) }}
+
+            <button type="submit" class="btn btn-light">{{ "Submit"|trans }}</button>
+            {{ form_end(userForm) }}
+        </div>
+
+        <hr class="d-block d-md-none my-5">
+
+        <div class="col-12 col-md-4 mx-auto">
+            <img src="{{ asset('img/' ~ user.avatar) }}" class="img-fluid rounded-circle" alt="Avatar de {{ user.username }}" title="Avatar de {{ user.username }}">
+        </div>
+    </div>
+{% endblock %}

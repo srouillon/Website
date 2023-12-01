@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ "New skill"|trans }}{{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-12 col-md-6">
+            {{ form_start(categorieForm) }}
+
+            <h2>{{ "New skill"|trans }}</h2>
+            <div class="row">
+                <div class="col-md-6 my-3">
+                    {{ form_widget(categorieForm) }}
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success">{{ "Submit"|trans }}</button>
+            {{ form_end(categorieForm) }}
+        </div>
+    </div>
+{% endblock %}

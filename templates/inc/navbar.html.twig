@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black mb-5">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-4 me-2 fs-2" href="/">Sébastien ROUILLON</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label={{ "Toggle navigation"|trans }}>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ms-5" id="navbar">
+            <div class="navbar-nav">
+                <a class="nav-link fs-5 mx-2" aria-current="page" href="{{ path('app_home') }}">{{ "Home"|trans }}</a>
+                <a class="nav-link fs-5 mx-2" href="{{ path('app_home') }}#competences">{{ 'Skills'|trans }}</a>
+                <a class="nav-link fs-5 mx-2" href="{{ path('app_home') }}#experiences">{{ 'Work Experience'|trans }}</a>
+                <a class="nav-link fs-5 mx-2" href="{{ path('app_contact') }}">Contact</a>
+                {% if app.user %}
+                    <a class="nav-link fs-5 mx-2 text-secondary" href="/phpMyAdmin/index.php" target="_blank">{{ "Database"|trans }}</a>
+                    <a class="nav-link fs-5 mx-2 text-danger" href="{{ path('app_logout') }}">{{ "Logout"|trans }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ "New work experience"|trans }}{{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <h2>{{ 'New work experience'|trans }}</h2>
+    <div class="row">
+        {{ form_start(experienceForm) }}
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-3">
+                    {{ form_row(experienceForm.name) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_row(experienceForm.enterprise) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_row(experienceForm.start) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_row(experienceForm.end) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            {{ form_row(experienceForm.descriptionFr) }}
+        </div>
+        <div class="col-md-12">
+            {{ form_row(experienceForm.descriptionEn) }}
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-3">
+                {{ form_row(experienceForm.url) }}
+            </div>
+            <div class="col-md-3">
+                {{ form_row(experienceForm.keywords) }}
+            </div>
+            <div class="col-md-4">
+                {{ form_row(experienceForm.file) }}
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">{{ "Submit"|trans }}</button>
+        {{ form_end(experienceForm) }}
+    </div>
+{% endblock %}

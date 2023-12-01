@@ -1,0 +1,64 @@
+<div class="modal fade" id="legalNoticeModal" tabindex="-1" aria-labelledby="legalNoticeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title" id="legalNoticeModalLabel">{{ "Legal Notice"|trans }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ol>
+                    <li class="mb-5">
+                        <b class="fs-5">{{ "Site Owner Identification:"|trans }}</b>
+                        <ul>
+                            <li>{{ "Sebastien ROUILLON"|trans }}</li>
+                            <li>{{ "Legal structure: Sole Proprietorship"|trans }}</li>
+                            <li>{{ "Registered office: 23 Square Well Street - 86400 Civray - France"|trans }}</li>
+                            <li>{{ "Siret: 877 929 356 00021"|trans }}</li>
+                            <li><span class="fa-solid fa-phone"></span> +33(0) 674 611 693</li>
+                            <li><span class="fa-regular fa-envelope"></span> <a href="{{ path('app_contact') }}">contact@srouillon.fr</a>
+                            </li>
+                            <li>{{ "Publication Director: Sebastien ROUILLON"|trans }}</li>
+                        </ul>
+                    </li>
+
+                    <li class="mb-5">
+                        <b class="fs-5">{{ "Site Host:"|trans }}</b>
+                        <ul>
+                            <li>{{ "OVH LIMITED"|trans }}</li>
+                            <li>{{ "Registered office: Becket House, 1 Lambeth Palace Road, London SE1 7EU"|trans }}</li>
+                            <li>{{ "Registration number: 5519821"|trans }}</li>
+                            <li><span class="fa-solid fa-phone"></span> {{ "+44333 370 0425"|trans }}</li>
+                            <li><span class="fa-regular fa-envelope"></span> support@ovh.com</li>
+                        </ul>
+                    </li>
+
+                    <li class="mb-5">
+                        <b class="fs-5">{{ "Personal information:"|trans }}</b>
+                        <ul>
+                            <li>
+                                {{ "In general, you can visit our website without having to identify yourself or provide your identity and provide any personal information about yourself. However, we we may sometimes ask you for information such as your identity (first and last name) first name), your e-mail address and your company. This data is collected exclusively for information purposes with a view to identifying you in order to establish a correspondence."|trans }}
+                                <br><br>
+                                {{ "You have the right to withdraw at any time the consent you have given to the processing of your personal data. If you wish to exercise this right, please contact us using the contact form."|trans }}
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <b class="fs-5">{{ "Cookies:"|trans }}</b>
+                        <ul>
+                            <li>{{ "Cookies are small text files stored on your computer or mobile device when you visit a website. They are commonly used to enhance browsing experience, provide additional features, and analyze site usage."|trans }}
+                                <br>
+                                <br>
+                                {{ "However, our site does not use cookies to collect personal information about you, and no data is stored or shared through third-party cookies."|trans }}
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">{{ "Close"|trans }}</button>
+            </div>
+        </div>
+    </div>
+</div>
